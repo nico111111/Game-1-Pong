@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Player1 : CharacterBody2D
+public partial class Player2 : CharacterBody2D
 {
 	[Export]
 	public int speed { get; set; } = 14;
@@ -20,11 +20,11 @@ public partial class Player1 : CharacterBody2D
 		var velocity = Vector2.Zero;
 
 
-		if (Input.IsActionPressed("Player1Up"))
+		if (Input.IsActionPressed("Player2Up"))
 		{
 			velocity.Y -= 1;
 		}
-		if (Input.IsActionPressed("Player1Down"))
+		if (Input.IsActionPressed("Player2Down"))
 		{
 			velocity.Y += 1;
 		}
