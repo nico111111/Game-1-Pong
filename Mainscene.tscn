@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://d7pyemdfsrkf"]
+
+[ext_resource type="Texture2D" uid="uid://dl1eetmn43fv" path="res://Sprite-0001.png" id="1_brnyg"]
+[ext_resource type="Texture2D" uid="uid://c7kwnpspohnr0" path="res://Sprite2.png" id="2_jqgvv"]
+[ext_resource type="Script" uid="uid://bbibgptmkebc8" path="res://Player1.cs" id="3_v7fus"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v7fus"]
+size = Vector2(34, 183)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jqgvv"]
+size = Vector2(32, 32)
+
+[node name="Node2D" type="Node2D" unique_id=2035292149]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1034302986]
+position = Vector2(577.74994, 325.25003)
+scale = Vector2(36.078125, 20.296875)
+texture = ExtResource("1_brnyg")
+
+[node name="Player2" type="RigidBody2D" parent="." unique_id=1630120424]
+position = Vector2(1082, 129)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player2" unique_id=897397036]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_v7fus")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player2" unique_id=912051422]
+position = Vector2(-7.6293945e-06, -2)
+scale = Vector2(1.0625001, 5.703124)
+texture = ExtResource("2_jqgvv")
+
+[node name="Player1" type="RigidBody2D" parent="." unique_id=1872837003]
+position = Vector2(86, 125)
+script = ExtResource("3_v7fus")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player1" unique_id=1077465773]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_v7fus")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player1" unique_id=994440903]
+position = Vector2(-7.6293945e-06, -2)
+scale = Vector2(1.0625001, 5.703124)
+texture = ExtResource("2_jqgvv")
+
+[node name="Ball" type="RigidBody2D" parent="." unique_id=1080064446]
+position = Vector2(588, 284)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball" unique_id=81509520]
+shape = SubResource("RectangleShape2D_jqgvv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ball" unique_id=1434789340]
+texture = ExtResource("2_jqgvv")
